@@ -1,0 +1,52 @@
+Is necessary add this change, if we need add support for 3 - keys shortcut
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\USER_NAME\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.0.1\libraries\USBHID\src\USBKeyboard.cpp
+
+bool USBKeyboard::key_code_three(uint8_t key, uint8_t modifier, uint8_t modifierS) {
+    _mutex.lock();
+
+    // Send a simulated keyboard keypress. Returns true if successful.
+    HID_REPORT report;
+
+    report.data[0] = REPORT_ID_KEYBOARD;
+    report.data[1] = modifier;
+    report.data[2] = modifierS;
+    report.data[3] = keymap[key].usage;
+    report.data[4] = 0;
+    report.data[5] = 0;
+    report.data[6] = 0;
+    report.data[7] = 0;
+    report.data[8] = 0;
+
+    report.length = 9;
+
+    if (!send(&report)) {
+        _mutex.unlock();
+        return false;
+    }
+
+    report.data[1] = 0;
+    report.data[3] = 0;
+
+    if (!send(&report)) {
+        _mutex.unlock();
+        return false;
+    }
+
+    _mutex.unlock();
+    return true;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\Miroslav\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.0.1\libraries\USBHID\src\USBKeyboard.h
+
+bool key_code_three(uint8_t key, uint8_t modifier = 0, uint8_t modifierS = 0);
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\Miroslav\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.0.1\cores\arduino\mbed\drivers\usb\include\usb\USBKeyboard.h
+
+bool key_code_three(uint8_t key, uint8_t modifier = 0, uint8_t modifierS = 0);

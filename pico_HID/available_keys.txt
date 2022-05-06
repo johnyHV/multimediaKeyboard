@@ -1,0 +1,51 @@
+#ifdef false
+enum MODIFIER_KEY {
+  KEY_CTRL = 0x01,
+  KEY_SHIFT = 0x02,
+  KEY_ALT = 0x04,
+  KEY_LOGO = 0x08,
+  KEY_RCTRL = 0x10,
+  KEY_RSHIFT = 0x20,
+  KEY_RALT = 0x40,
+  KEY_RLOGO = 0x80,
+};
+
+enum MEDIA_KEY {
+  KEY_NEXT_TRACK,     /*!< next Track Button */
+  KEY_PREVIOUS_TRACK, /*!< Previous track Button */
+  KEY_STOP,           /*!< Stop Button */
+  KEY_PLAY_PAUSE,     /*!< Play/Pause Button */
+  KEY_MUTE,           /*!< Mute Button */
+  KEY_VOLUME_UP,      /*!< Volume Up Button */
+  KEY_VOLUME_DOWN,    /*!< Volume Down Button */
+};
+
+enum FUNCTION_KEY {
+  KEY_F1 = 128,   /* F1 key */
+  KEY_F2,         /* F2 key */
+  KEY_F3,         /* F3 key */
+  KEY_F4,         /* F4 key */
+  KEY_F5,         /* F5 key */
+  KEY_F6,         /* F6 key */
+  KEY_F7,         /* F7 key */
+  KEY_F8,         /* F8 key */
+  KEY_F9,         /* F9 key */
+  KEY_F10,        /* F10 key */
+  KEY_F11,        /* F11 key */
+  KEY_F12,        /* F12 key */
+
+  KEY_PRINT_SCREEN,   /* Print Screen key */
+  KEY_SCROLL_LOCK,    /* Scroll lock */
+  KEY_CAPS_LOCK,      /* caps lock */
+  KEY_NUM_LOCK,       /* num lock */
+  KEY_INSERT,         /* Insert key */
+  KEY_HOME,           /* Home key */
+  KEY_PAGE_UP,        /* Page Up key */
+  KEY_PAGE_DOWN,      /* Page Down key */
+
+  RIGHT_ARROW,        /* Right arrow */
+  LEFT_ARROW,         /* Left arrow */
+  DOWN_ARROW,         /* Down arrow */
+  UP_ARROW,           /* Up arrow */
+};
+#endif
