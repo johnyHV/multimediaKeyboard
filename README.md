@@ -43,7 +43,7 @@ Pico pinout:
 | Switch button C | 7 |
 
 # SW
-Arduino IDE is used for programming. It's neccesary install support for RPI pico board to arduino ide. Link for library is [here](https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json). Then as board we need use "Arduino Mbed OS RP2040 boards". Before SW flashing is neccesary hold BOOT switch, and power up RPI pico.
+Arduino IDE is used for programming. It's neccesary install support for RPI pico board to arduino ide. Link for library is here https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json. Then as board we need use "Arduino Mbed OS RP2040 boards". Before SW flashing is neccesary hold BOOT switch, and power up RPI pico.
 
 # Links
 Link to source [code](https://github.com/johnyHV/multimediaKeyboard)
