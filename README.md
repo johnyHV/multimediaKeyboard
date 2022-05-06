@@ -28,16 +28,17 @@ Multimedia keyboard for audio control. RPI pico emulates a multimedia HID keyboa
 Switches on the keyboard use one common ground wire. On the botton side is hole, for switch RPI pico to "flash mode" without case opening. As MCU is used RPI pico. Currently is RPI pico cheaper as Arduino Micro
 
 Pico pinout:
-Encoder DT - 20
-Encoder CLK - 21
-Encoder SW - 19
-
-Switch prew - 6
-Switch stop - 5
-Switch next - 3
-Switch button A - 5
-Switch mute - 4
-Switch button C - 7
+| function | pin |
+| ---------| ---- |
+| Encoder DT | 20 |
+| Encoder CLK | 21 |
+| Encoder SW | 19 |
+| Switch prew | 6 |
+| Switch stop | 5 |
+| Switch next | 3 |
+| Switch button A | 5 |
+| Switch mute | 4 |
+| Switch button C | 7 |
 
 # SW
 Arduino IDE is used for programming. It's neccesary install support for RPI pico board to arduino ide. Link for library is [here](https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json). Then as board we need use "Arduino Mbed OS RP2040 boards". Before SW flashing is neccesary hold BOOT switch, and power up RPI pico.
